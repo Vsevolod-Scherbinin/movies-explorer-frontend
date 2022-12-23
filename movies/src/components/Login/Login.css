@@ -1,0 +1,51 @@
+.login {
+  margin: 0;
+  padding: 0 0 70px;
+  box-sizing: border-box;
+}
+
+.login__question {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  font-size: 14px;
+  line-height: 17px;
+  font-weight: normal;
+  color: #A0A0A0;
+}
+
+.login__link {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  color: #3456F3;
+  transition: .3s;
+  cursor: pointer;
+}
+
+.login__link:hover {
+  opacity: .6;
+}
+
+/* --------------- MaxWidth-1279-Start --------------- */
+@media screen and (max-width: 1279px) {
+  .login {
+    padding: 0 0 232px;
+  }
+}
+/* --------------- MaxWidth-1279-End --------------- */
+
+/* --------------- MaxWidth-767-Start --------------- */
+@media screen and (max-width: 767px) {
+  .login {
+    padding: 0 0 30px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .login__question {
+    font-size: 12px;
+    line-height: 15px;
+  }
+}
+/* --------------- MaxWidth-767-End --------------- */
