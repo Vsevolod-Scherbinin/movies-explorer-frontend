@@ -1,9 +1,9 @@
 import React from 'react';
-import { Route, Switch, Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import './Navigation.css';
 import MenuPopup from '../MenuPopup/MenuPopup';
 
-function Navigation() {
+function Navigation({main}) {
   const [isMenuPopupOpen, setIsMenuPopupOpen] = React.useState(false);
 
   function openMenu() {
@@ -15,45 +15,24 @@ function Navigation() {
   }
 
   return (
-      <div className="navigation">
-        <Switch>
-          <Route exact path="/">
-            <div className="navigation__links navigation__links_route_main">
-              <Link to="/sign-up" className="navigation__link navigation__link_content_register navigation__link_color_white">Регистрация</Link>
-              <Link to="/sign-in" className="navigation__link">
-                <button className="navigation__button navigation__button_type_signin">Войти</button>
-              </Link>
-            </div>
-          </Route>
-          <Route path="/movies">
-            <div className="navigation__links navigation__links_route_movies">
-              <Link to="/movies" className="navigation__link navigation__link_content_films navigation__link_color_black">Фильмы</Link>
-              <Link to="/saved-movies" className="navigation__link navigation__link_content_savedFilms navigation__link_color_black">Сохранённые фильмы</Link>
-              <Link to="/profile" className="navigation__link ">
-                <button className="navigation__button navigation__button_type_profile">Аккаунт</button>
-              </Link>
-            </div>
-          </Route>
-          <Route path="/saved-movies">
-            <div className="navigation__links navigation__links_route_movies">
-              <Link to="/movies" className="navigation__link navigation__link_content_films navigation__link_color_black">Фильмы</Link>
-              <Link to="/saved-movies" className="navigation__link navigation__link_content_savedFilms navigation__link_color_black">Сохранённые фильмы</Link>
-              <Link to="/profile" className="navigation__link ">
-                <button className="navigation__button navigation__button_type_profile">Аккаунт</button>
-              </Link>
-            </div>
-          </Route>
-          <Route path="/profile">
-            <div className="navigation__links navigation__links_route_movies">
-              <Link to="/movies" className="navigation__link navigation__link_content_films navigation__link_color_black">Фильмы</Link>
-              <Link to="/saved-movies" className="navigation__link navigation__link_content_savedFilms navigation__link_color_black">Сохранённые фильмы</Link>
-              <Link to="/profile" className="navigation__link ">
-                <button className="navigation__button navigation__button_type_profile">Аккаунт</button>
-              </Link>
-            </div>
-          </Route>
-        </Switch>
-      <button className="navigation__menu navigation__button_type_menu" onClick={openMenu}></button>
+    <div className={`navigation ${main ? "navigation__route_main" : "navigation__route_notMain"}`}>
+      <nav className={`${main ? "navigation__bar navigation__bar_route_main"  : "navigation__hide"}`}>
+        <NavLink to="/sign-up" className="navigation__link navigation__link_content_register">Регистрация</NavLink>
+        <NavLink to="/sign-in" className="navigation__link">
+          <button className="navigation__button navigation__button_type_signin">Войти</button>
+        </NavLink>
+      </nav>
+
+      <div className={`${main ? "navigation__hide" : "navigation__bar navigation__bar_route_notMain"}`}>
+        <nav className="navigation__links">
+          <NavLink to="/movies" className="navigation__link navigation__link_content_films ">Фильмы</NavLink>
+          <NavLink to="/saved-movies" className="navigation__link navigation__link_content_savedFilms ">Сохранённые фильмы</NavLink>
+        </nav>
+        <NavLink to="/profile" className="navigation__linkButton ">
+          <button className="navigation__button navigation__button_type_profile">Аккаунт</button>
+        </NavLink>
+      </div>
+      <button className={`${main ? "navigation__hide" : "navigation__button navigation__button_type_menu navigation__hide"}`} onClick={openMenu}></button>
       <MenuPopup isOpen={isMenuPopupOpen} onClose={closeMenu} />
     </div>
   )

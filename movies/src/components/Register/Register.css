@@ -11,14 +11,14 @@
   font-size: 14px;
   line-height: 17px;
   font-weight: normal;
-  color: #A0A0A0;
+  color: #8B8B8B;
 }
 
 .register__link {
   margin: 0;
   padding: 0;
   text-decoration: none;
-  color: #3456F3;
+  color: #4285F4;
   transition: .3s;
   cursor: pointer;
 }

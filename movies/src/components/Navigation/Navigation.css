@@ -1,30 +1,54 @@
 .navigation {
   margin: 0;
   padding: 0;
+  width: calc(100% - 38px - 44px);
+  display: flex;
 }
 
-.navigation__links {
+.navigation__route_main {
+  justify-content: flex-end;
+}
+
+.navigation__route_notMain {
+  justify-content: space-between;
+}
+
+.navigation__hide {
+  display: none;
+}
+
+.navigation__bar {
   margin: 0;
   padding: 0;
 }
 
-.navigation__links_route_main {
+.navigation__bar_route_main {
+  justify-content: end;
   display: grid;
   align-items: center;
   grid-template-columns: repeat(2, minmax(min-content, max-content));
   gap: 30px;
 }
 
-.navigation__links_route_movies {
+.navigation__bar_route_notMain {
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.navigation__links {
+  display: grid;
+  align-items: center;
+  grid-template-columns: repeat(2, minmax(min-content, max-content));
+  gap: 16px;
 }
 
 .navigation__link {
   margin: 0;
   padding: 0;
   text-decoration: none;
+  color: #fff;
   transition: .3s;
 }
 
@@ -32,28 +56,17 @@
   opacity: .6;
 }
 
-.navigation__link_color_white {
-  color: #fff;
-}
-
-.navigation__link_color_black {
-  color: #000;
-}
-
 .navigation__link_content_register {
   margin: 0;
   padding: 0;
-  font-size: 12px;
-  line-height: 16px;
+  font-size: 13px;
+  line-height: 18px;
   font-weight: 500;
 }
 
-.navigation__link_content_films {
-  margin-right: 20px;
-}
-
-.navigation__link_content_savedFilms {
-  margin-right: 50px;
+.navigation__linkButton {
+  margin: 0;
+  padding: 0;
 }
 
 .navigation__button {
@@ -67,11 +80,11 @@
 .navigation__button_type_signin {
   width: 76px;
   height: 32px;
-  font-size: 12px;
+  font-size: 14px;
   line-height: 16px;
   font-weight: 500;
   border-radius: 3px;
-  background-color: #2BE080;
+  background-color: #3DDC84;
   color: #000;
 }
 
@@ -79,8 +92,8 @@
   width: 100px;
   height: 32px;
   border-radius: 20px;
-  background-color: #F5F5F5;
-  color: #000;
+  background-color: #313131;
+  color: #FFFFFF;
 }
 
 .navigation__button_type_menu {
@@ -88,6 +101,9 @@
   padding: 0;
   width: 44px;
   height: 44px;
+  position: absolute;
+  top: 15px;
+  right: 30px;
   background-image: url(../../images/menu.svg);
   background-repeat: no-repeat;
   background-position: center;
@@ -104,7 +120,7 @@
 
 /* --------------- MaxWidth-1279-Start --------------- */
 @media screen and (max-width: 1279px) {
-  .navigation__links {
+  .navigation__bar_route_notMain {
     display: none;
   }
 }
@@ -127,6 +143,7 @@
   .navigation__button_type_menu {
     width: 40px;
     height: 43px;
+    right: 14px;
   }
 }
 /* --------------- MaxWidth-767-End --------------- */

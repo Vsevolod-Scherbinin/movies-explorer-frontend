@@ -2,14 +2,14 @@
   margin: 0;
   padding: 110px 70px;
   box-sizing: border-box;
-  background-color: #fff;
-  color: #000;
+  background-color: #202020;
+  color: #FFFFFF;
 }
 
 .aboutProject__header {
   margin: 0 0 70px;
   padding: 0;
-  border-bottom: 1px solid #000;
+  border-bottom: 1px solid #DADADA;
 }
 
 .aboutProject__headerTitle {
@@ -71,13 +71,15 @@
 .aboutProject__timelineBar_type_short {
   margin: 0;
   padding: 0;
-  background-color: #2BE080;
+  background-color: #3DDC84;
+  color: #000000;
 }
 
 .aboutProject__timelineBar_type_long {
   margin: 0;
   padding: 0;
-  background-color: #F2F2F2;
+  background-color: #303030;
+  color: #FFFFFF;
 }
 
 .aboutProject__timelineHeader {
@@ -96,7 +98,7 @@
   font-size: 14px;
   line-height: 17px;
   font-weight: 500;
-  color: #A0A0A0;
+  color: #8B8B8B;
 }
 
 /* --------------- MaxWidth-1279-Start --------------- */

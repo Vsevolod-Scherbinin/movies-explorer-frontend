@@ -5,15 +5,14 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #F5F5F5;
-  color: #000;
+  background-color: #272727;
 }
 
 .techs__header {
   margin: 0 0 70px;
   padding: 0;
   width: 100%;
-  border-bottom: 1px solid #000;
+  border-bottom: 1px solid #DADADA;
 }
 
 .techs__headerTitle {
@@ -70,7 +69,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #E8E8E8;
+  background-color: #303030;
   border-radius: 10px;
 }
 

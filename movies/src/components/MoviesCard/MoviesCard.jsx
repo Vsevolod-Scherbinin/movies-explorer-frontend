@@ -1,18 +1,21 @@
 import React from "react";
 import './MoviesCard.css';
 
-function MoviesCard (){
+function MoviesCard ({isSavedList, isSaved}){
 
   return(
-    <li className="moviesCard">
-      <div className="moviesCard__image"></div>
-      <div className="moviesCard__nameLikeGroup">
-        <h2 className="moviesCard__name">33 слова о дизайне</h2>
-        <button type="button" className="moviesCard__like"></button>
+    <li className={`${!isSavedList && "moviesCard"} ${(isSavedList && !isSaved) && "moviesCard__hide"}`}>
+      <div className="moviesCard__image">
+        <button className={`moviesCard__icon ${isSaved ? "moviesCard__hide" : "moviesCard__save"}`}>Сохранить</button>
+        <button className={`moviesCard__icon ${isSavedList ? "moviesCard__delete" : "moviesCard__hide"}`}></button>
       </div>
       <div className="moviesCard__bottom">
-        <p className="moviesCard__duration">1ч42м</p>
+        <h2 className="moviesCard__name">33 слова о дизайне</h2>
+        <div className="moviesCard__duration">
+          <p className="moviesCard__durationValue">1ч42м</p>
+        </div>
       </div>
+      <div className={`moviesCard__icon ${isSaved && "moviesCard__savedIcon"} ${isSavedList && "moviesCard__hide"}`}></div>
     </li>
   )
 }

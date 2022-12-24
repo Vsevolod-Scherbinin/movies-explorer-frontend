@@ -3,20 +3,19 @@ import './MoviesCardList.css';
 import MoviesCard from '../MoviesCard/MoviesCard';
 
 
-function MoviesCardList (){
+function MoviesCardList ({isSavedList}){
 
   return(
     <section className="moviesCardList">
       <ul className="moviesCardList__cards">
-        <MoviesCard />
-        <MoviesCard />
-        <MoviesCard />
-        <MoviesCard />
-        <MoviesCard />
-        <MoviesCard />
-        <MoviesCard />
-        <MoviesCard />
-        <MoviesCard />
+        <MoviesCard isSavedList={isSavedList} isSaved={true} />
+        <MoviesCard isSavedList={isSavedList}/>
+        <MoviesCard isSavedList={isSavedList} isSaved={true}/>
+        <MoviesCard isSavedList={isSavedList}/>
+        <MoviesCard isSavedList={isSavedList} isSaved={true}/>
+        <MoviesCard isSavedList={isSavedList}/>
+        <MoviesCard isSavedList={isSavedList}/>
+        <MoviesCard isSavedList={isSavedList}/>
       </ul>
       <div className="moviesCardList__more">
         <button className="moviesCardList__moreButton">Ещё</button>

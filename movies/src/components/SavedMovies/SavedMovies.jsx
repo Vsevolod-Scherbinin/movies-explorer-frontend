@@ -9,7 +9,7 @@ function SavedMovies (){
   return(
     <main className="savedMovies">
       <SearchForm />
-      <MoviesCardList />
+      <MoviesCardList isSavedList={true} />
     </main>
   )
 }
