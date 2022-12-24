@@ -21,3 +21,12 @@
   font-weight: normal;
   color: #fff;
 }
+
+/* --------------- MaxWidth-767-Start --------------- */
+@media screen and (max-width: 767px) {
+  .promo__title {
+    font-size: 31px;
+    line-height: 39px;
+  }
+}
+/* --------------- MaxWidth-767-End --------------- */
