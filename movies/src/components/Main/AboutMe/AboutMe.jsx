@@ -17,7 +17,7 @@ function AboutMe (){
             Я люблю слушать музыку, путешествовать и много гулять пешком по городам.
             6 лет назад начал кодить, но потом пришлось больше времени уделять основной работе. Недавно решил пойти учиться этой профессии.
           </p>
-          <a href="https://github.com/Vsevolod-Scherbinin" className="aboutMe__gitHub" >GitHub</a>
+          <a href="https://github.com/Vsevolod-Scherbinin" className="aboutMe__gitHub" target="_blank" rel="noreferrer">GitHub</a>
         </div>
         <div className="aboutMe__photo"></div>
       </div>

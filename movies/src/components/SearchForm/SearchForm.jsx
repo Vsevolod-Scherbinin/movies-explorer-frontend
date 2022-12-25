@@ -8,7 +8,7 @@ function SearchForm (){
       <div className="searchForm__main">
         <div className="searchForm__inputGroup">
           <div className="searchForm__icon"></div>
-          <input type="text" className="searchForm__input" placeholder="Фильм"/>
+          <input type="text" className="searchForm__input" placeholder="Фильм" required/>
           <button className="searchForm__searchButton"></button>
         </div>
         <div className="searchForm__switchGroup">

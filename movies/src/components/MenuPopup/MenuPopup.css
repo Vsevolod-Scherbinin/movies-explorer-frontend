@@ -94,6 +94,11 @@
   opacity: .6;
 }
 
+.menuPopup__linkButton {
+  margin: 0;
+  padding: 0;
+}
+
 .menuPopup__profileButton {
   margin: 0;
   padding: 0;

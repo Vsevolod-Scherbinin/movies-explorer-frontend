@@ -13,7 +13,7 @@ function MenuPopup({isOpen, onClose}) {
           <NavLink to="/movies" className="menuPopup__link" activeClassName="menuPopup__link_active">Фильмы</NavLink>
           <NavLink to="/saved-movies" className="menuPopup__link" activeClassName="menuPopup__link_active">Сохранённые фильмы</NavLink>
         </nav>
-        <Link to="/profile" className="menuPopup__link">
+        <Link to="/profile" className="menuPopup__linkButton">
           <button className="menuPopup__profileButton">Аккаунт</button>
         </Link>
       </div>

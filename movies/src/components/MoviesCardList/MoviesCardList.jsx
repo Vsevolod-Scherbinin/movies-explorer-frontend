@@ -17,9 +17,7 @@ function MoviesCardList ({isSavedList}){
         <MoviesCard isSavedList={isSavedList}/>
         <MoviesCard isSavedList={isSavedList}/>
       </ul>
-      <div className="moviesCardList__more">
-        <button className="moviesCardList__moreButton">Ещё</button>
-      </div>
+      <button className="moviesCardList__moreButton">Ещё</button>
     </section>
   )
 }

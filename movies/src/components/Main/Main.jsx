@@ -8,7 +8,6 @@ import AboutMe from './AboutMe/AboutMe';
 import Portfolio from './Portfolio/Portfolio';
 
 function Main (){
-  // const currentUser = React.useContext(CurrentUserContext);
 
   return(
     <main className="main">
