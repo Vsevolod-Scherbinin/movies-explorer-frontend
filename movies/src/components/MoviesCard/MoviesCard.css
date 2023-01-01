@@ -10,6 +10,7 @@
   padding: 0;
   width: 360px;
   height: 201px;
+  border-radius: 6px;
   background-image: url(../../images/33_words_about_design.jpg);
   background-size: cover;
   background-repeat: no-repeat;
@@ -36,7 +37,6 @@
   font-weight: 500;
 }
 
-moviesCard__name
 .moviesCard__duration {
   margin: 14px 14px 0 14px;
   padding: 0;

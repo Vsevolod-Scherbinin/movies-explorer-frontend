@@ -2,13 +2,12 @@
   margin: 0;
   padding: 0;
   height: 66px;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: #272727;
   color: #fff;
-  font-size: 13px;
-  line-height: 16px;
   text-decoration: underline;
 }
 
@@ -19,6 +18,8 @@
   display: grid;
   grid-template-columns: repeat(3, minmax(min-content, max-content));
   gap: 40px;
+  font-size: 13px;
+  line-height: 16px;
 }
 
 .navTab__link {
@@ -32,3 +33,12 @@
 .navTab__link:hover {
   opacity: .6;
 }
+
+/* --------------- MaxWidth-767-Start --------------- */
+@media screen and (max-width: 767px) {
+  .navTab__links {
+    gap: 24px;
+    font-size: 11px;
+  }
+}
+/* --------------- MaxWidth-767-End --------------- */

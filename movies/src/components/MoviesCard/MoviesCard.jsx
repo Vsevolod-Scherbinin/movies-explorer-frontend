@@ -12,7 +12,7 @@ function MoviesCard ({isSavedList, isSaved}){
       <div className="moviesCard__bottom">
         <h2 className="moviesCard__name">33 слова о дизайне</h2>
         <div className="moviesCard__duration">
-          <p className="moviesCard__durationValue">1ч42м</p>
+          <p className="moviesCard__durationValue">1ч 42м</p>
         </div>
       </div>
       <div className={`moviesCard__icon ${isSaved && "moviesCard__savedIcon"} ${isSavedList && "moviesCard__hiddenElement"}`}></div>
