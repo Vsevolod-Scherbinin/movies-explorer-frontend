@@ -63,17 +63,26 @@
   color: #FFFFFF;
 }
 
-.authForm__input:invalid {
+.authForm__input:focus {
+  outline: none;
+}
+
+.authForm__input_type_error {
   color: #EE3465;
 }
 
 .authForm__error {
   margin: 10px 0 20px;
   padding: 0;
+  height: 12px;
   font-size: 10px;
   line-height: 12px;
   font-weight: normal;
   color: #FF3055;
+}
+
+.authForm__error_hidden {
+  color: transparent;
 }
 
 .authForm__button {
@@ -94,6 +103,10 @@
 
 .authForm__button:hover {
   opacity: .6;
+}
+
+.authForm__button_inactive {
+  opacity: .3;
 }
 
 /* --------------- MaxWidth-1279-Start --------------- */

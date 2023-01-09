@@ -1,10 +1,8 @@
 .navigation {
   margin: 0;
   padding: 0;
-  /* padding: 0 0 0 44px; */
   box-sizing: border-box;
   width: calc(100% - 38px - 44px);
-  /* width: 100%; */
   display: flex;
 }
 

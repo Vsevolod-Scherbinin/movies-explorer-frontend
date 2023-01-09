@@ -4,22 +4,22 @@ import './Header.css';
 import Navigation from '../Navigation/Navigation';
 
 
-function Header({main}) {
+function Header({loggedIn}) {
   return (
-    <header className={`header ${main && "header_route_main"}`}>
+    <header className={`header ${!loggedIn && "header_route_main"}`}>
       <Link to="/" className="header__logo" />
       <Switch>
         <Route exact path="/">
-          <Navigation main={main} />
+          <Navigation loggedIn={loggedIn} />
         </Route>
         <Route path="/movies">
-          <Navigation main={main} />
+          <Navigation loggedIn={loggedIn} />
         </Route>
         <Route path="/saved-movies">
-          <Navigation main={main} />
+          <Navigation loggedIn={loggedIn} />
         </Route>
         <Route path="/profile">
-          <Navigation main={main} />
+          <Navigation loggedIn={loggedIn} />
         </Route>
       </Switch>
     </header>

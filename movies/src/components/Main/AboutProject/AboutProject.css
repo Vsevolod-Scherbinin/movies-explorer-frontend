@@ -18,6 +18,7 @@
   font-size: 22px;
   line-height: 27px;
   font-weight: normal;
+  letter-spacing: -0.04em;
 }
 
 .aboutProject__info {
@@ -42,6 +43,7 @@
   font-size: 20px;
   line-height: 24px;
   font-weight: normal;
+  letter-spacing: -0.04em;
 }
 
 .aboutProject__text {
@@ -167,6 +169,13 @@
   .aboutProject__subtitle {
     font-size: 18px;
     line-height: 22px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .aboutProject__text {
+    font-size: 11px;
+    line-height: 16px;
   }
 }
 

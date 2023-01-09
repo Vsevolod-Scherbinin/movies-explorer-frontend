@@ -1,23 +1,42 @@
-import React from "react";
+import React from 'react';
+import { useLocation } from 'react-router-dom';
 import './MoviesCardList.css';
 import MoviesCard from '../MoviesCard/MoviesCard';
 
 
-function MoviesCardList ({isSavedList}){
+function MoviesCardList ({
+  showMore,
+  moviesRemains,
+  shortMoviesRemains,
+  shownMovies,
+  shortMoviesStatus,
+  preloader,
+  handleSaveMovie,
+  handleDeleteMovie,
+  savedMovies,
+  savedMoviesId}){
+
+  const currentRoute = useLocation();
 
   return(
-    <section className="moviesCardList">
+    <section className={`moviesCardList ${preloader && "moviesCardList_hidden"}`}>
       <ul className="moviesCardList__cards">
-        <MoviesCard isSavedList={isSavedList} isSaved={true} />
-        <MoviesCard isSavedList={isSavedList}/>
-        <MoviesCard isSavedList={isSavedList} isSaved={true}/>
-        <MoviesCard isSavedList={isSavedList}/>
-        <MoviesCard isSavedList={isSavedList} isSaved={true}/>
-        <MoviesCard isSavedList={isSavedList}/>
-        <MoviesCard isSavedList={isSavedList}/>
-        <MoviesCard isSavedList={isSavedList}/>
+        {
+          shownMovies.map((movieItem) => (
+            <MoviesCard
+              key={movieItem.id || movieItem.movieId}
+              movie={movieItem}
+              handleSaveMovie={handleSaveMovie}
+              handleDeleteMovie={handleDeleteMovie}
+              savedMoviesId={savedMoviesId} />))
+        }
       </ul>
-      <button className="moviesCardList__moreButton">Ещё</button>
+      {currentRoute.pathname === '/movies' && (
+        <button className={`
+          ${(moviesRemains.length > 0 && !shortMoviesStatus) ? "moviesCardList__moreButton" : "moviesCardList__moreButton_hidden"}
+          ${(shortMoviesRemains > 0 && shortMoviesStatus) && "moviesCardList__moreButton"}`}
+          onClick={showMore}>Ещё</button>
+      )}
     </section>
   )
 }
