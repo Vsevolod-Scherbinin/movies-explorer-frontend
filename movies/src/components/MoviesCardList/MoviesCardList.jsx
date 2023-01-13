@@ -13,7 +13,6 @@ function MoviesCardList ({
   preloader,
   handleSaveMovie,
   handleDeleteMovie,
-  savedMovies,
   savedMoviesId}){
 
   const currentRoute = useLocation();

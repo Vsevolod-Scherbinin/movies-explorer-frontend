@@ -8,7 +8,7 @@ function Popup ({
   closePopup}){
 
   return(
-    <div className={`${isPopupOpen && "popup"}`}>
+    <div className={`popup ${isPopupOpen && "popup_open"}`}>
       <h1 className="popup__title">{popupErrorCode}</h1>
       <p className="popup__subtitle">{popupErrorMessage}</p>
       <button className="popup__button" onClick={closePopup} >Назад</button>

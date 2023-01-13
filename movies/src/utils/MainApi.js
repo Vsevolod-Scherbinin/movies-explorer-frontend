@@ -1,3 +1,5 @@
+import { BASE_URL } from "../constants/constants";
+
 class MainApi {
   constructor(host, headers, corsHeaders) {
     this._host = host;
@@ -70,5 +72,4 @@ class MainApi {
   }
 }
 
-// export const mainApi = new MainApi('http://localhost:4000', {'Content-Type': 'application/json'});
-export const mainApi = new MainApi('https://api.scherbinin.diploma.nomoredomains.club', {'Content-Type': 'application/json'});
+export const mainApi = new MainApi(BASE_URL, {'Content-Type': 'application/json'});

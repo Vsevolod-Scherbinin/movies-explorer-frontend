@@ -11,21 +11,21 @@ function SavedMovies ({
   preloader,
   preloaderMessage,
   spinPreloader,
-  savedMovies,
+  filterShortMovies,
   savedMoviesId,
   handleDeleteMovie}){
 
   return(
     <main className="savedMovies">
       <SearchForm
-        searchMovies={searchMovies} />
+        searchMovies={searchMovies}
+        filterShortMovies={filterShortMovies} />
       <Preloader
         preloader={preloader}
         preloaderMessage={preloaderMessage}
         spinPreloader={spinPreloader} />
       <MoviesCardList
         shownMovies={shownMovies}
-        savedMovies={savedMovies}
         savedMoviesId={savedMoviesId}
         handleDeleteMovie={handleDeleteMovie} />
     </main>

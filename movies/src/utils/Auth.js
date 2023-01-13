@@ -1,5 +1,4 @@
-export const BASE_URL = 'https://api.scherbinin.diploma.nomoredomains.club';
-// export const BASE_URL = 'http://localhost:4000';
+import { BASE_URL } from "../constants/constants";
 
 function request({url, method = 'POST', data}) {
   return fetch(`${BASE_URL}${url}`, {

@@ -1,11 +1,13 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './AuthForm.css';
+
 
 
 function AuthForm({title, name, buttonText, onSubmit, isValid, children}) {
   return(
     <section className="authForm">
-      <div className="authForm__logo"></div>
+      <Link to="/" className="authForm__logo" />
       <h1 className="authForm__title">{title}</h1>
       <form className="authForm__form" name={name} onSubmit={onSubmit} >
         {children}

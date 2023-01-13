@@ -8,7 +8,7 @@ function Profile ({onUpdateUser, onLogout}){
 
   const { values, errors, isValid, handleChange, resetForm } = useFormWithValidation();
 
-  const isValidForm = isValid || (currentUser.name !== values.name && currentUser.email !== values.email);
+  const notValidForm = !isValid || (currentUser.name === values.name && currentUser.email === values.email);
 
   useEffect(() => {
     if (currentUser) {
@@ -44,8 +44,8 @@ function Profile ({onUpdateUser, onLogout}){
           <p className={`profile__error ${isValid && "profile__error_hidden"}`}>{errors.password || ''}</p>
 
         </div>
-      <button type="submit" disabled={!isValidForm}
-        className={`profile__buttonEdit ${!isValidForm ? 'profile__buttonEdit_type_error' : ''}`}>Редактировать</button>
+      <button type="submit" disabled={notValidForm}
+        className={`profile__buttonEdit ${notValidForm && "profile__buttonEdit_inactive"}`}>Редактировать</button>
       <button className="profile__buttonLogout" onClick={onLogout}>Выйти из аккаунта</button>
       </form>
     </main>

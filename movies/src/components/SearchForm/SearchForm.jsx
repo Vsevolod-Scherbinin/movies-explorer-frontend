@@ -1,7 +1,10 @@
 import { useEffect, useState } from 'react';
+import { useLocation } from 'react-router-dom';
 import './SearchForm.css';
 
 function SearchForm({searchMovies, filterShortMovies}) {
+
+  const currentRoute = useLocation();
 
   const [inputSearchValue, setInputSearchValue] = useState('');
   const [shortMovieSwitch, setShortMovieSwitch] = useState(false);
@@ -23,8 +26,10 @@ function SearchForm({searchMovies, filterShortMovies}) {
   }
 
   useEffect(() => {
-    setInputSearchValue(localStorage.getItem('inputSearchValue'));
-    setShortMovieSwitch(localStorage.getItem('shortMoviesStatus') === 'true');
+    if(currentRoute.pathname === '/movies') {
+      setInputSearchValue(localStorage.getItem('inputSearchValue'));
+      setShortMovieSwitch(localStorage.getItem('shortMoviesStatus') === 'true');
+    }
   }, []);
 
   return(
