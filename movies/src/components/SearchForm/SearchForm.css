@@ -2,7 +2,8 @@
   margin: 0 auto;
   padding: 80px 0 83px;
   box-sizing: border-box;
-  width: calc(100% - 2*70px);
+  width: calc(100vw - 2*70px);
+  max-width: calc(1280px - 2*70px);
   height: 222px;
   display: flex;
   justify-content: space-between;
@@ -46,9 +47,14 @@
 .searchForm__input {
   margin: 0;
   padding: 0;
-  min-width: 10px;
+  width: 80%;
   background-color: #202020;
-  border: 0;
+  border: none;
+  color: #FFFFFF;
+}
+
+.searchForm__input:focus {
+  outline: none;
 }
 
 .searchForm__searchButton {
@@ -145,7 +151,7 @@
 @media screen and (max-width: 1279px) {
   .searchForm {
     padding: 80px 0 109px;
-    width: calc(100% - 2*30px);
+    width: calc(100vw - 2*30px);
   }
 }
 
@@ -160,8 +166,7 @@
 /* --------------- MaxWidth-767-Start --------------- */
 @media screen and (max-width: 767px) {
   .searchForm {
-    /* width: calc(100% - 2*10px); */
-    width: 100%;
+    width: calc(100vw - 2*10px);
     padding: 80px 0 44px;
   }
 }
